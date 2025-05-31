@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import cv from '../assets/cv.pdf'
 import { Menu, X } from 'lucide-react'; // make sure to install `lucide-react` or replace with any icon library
 import { useNavigate } from 'react-router-dom';
- import logo from '../assets/Mlogo.jpg';
+import logo from '../assets/Mlogo.jpg';
 
 export default function Navbar() {
   const navigate = useNavigate()
@@ -27,18 +27,18 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
         {/* Logo */}
         {/* <div className="text-2xl font-bold tracking-wide">MyPortfolio</div> */}
-       
 
-<div className="flex items-center gap-2">
-  <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
-    <img
-      src={logo}
-      alt="Logo"
-      className="w-6 h-6 object-contain"
-    />
-  </div>
-  <span className="text-2xl font-bold tracking-wide">M-Portfolio</span>
-</div>
+
+        <div onClick={() => navigate('/')} className="flex items-center gap-2 cursor-pointer">
+          <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
+            <img
+              src={logo}
+              alt="Logo"
+              className="w-6 h-6 object-contain"
+            />
+          </div>
+          <span className="text-2xl font-bold tracking-wide">M-Portfolio</span>
+        </div>
 
 
 
